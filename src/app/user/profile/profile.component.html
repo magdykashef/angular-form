@@ -1,0 +1,36 @@
+<!-- start container -->
+<div class="container">
+  <!-- start row -->
+  <div class="row my-5 justify-content-center">
+    <!-- start columns -->
+    <div class="col-sm-3 col-10">
+
+      <!-- start mat card -->
+      <mat-card *ngIf="userData$ | async as userData">
+
+        <img src="../../assets/person.jpeg" alt="user photo">
+        
+        <!-- start mat card header -->
+        <mat-card-header>
+          <mat-card-title>Name: {{userData.firstname}}</mat-card-title>
+          <mat-card-subtitle>Email: {{userData.email}}</mat-card-subtitle>
+          <mat-card-subtitle>Tel: {{userData.telnum}}</mat-card-subtitle>
+        </mat-card-header><!-- start mat card header -->
+
+        <!-- start mat card content -->
+        <mat-card-content>
+          <p>
+            Address: {{userData.address}}
+          </p>
+        </mat-card-content><!-- end mat card content -->
+
+        <!-- start mat card action buttons -->
+        <mat-card-actions>
+          <button (click)="onDelete()" mat-button class="btn">Delete</button>
+          <button (click)="onEdit()" mat-button class="btn btn-primary">Edit</button>
+        </mat-card-actions><!-- start mat card action buttons -->
+      </mat-card><!-- End mat card -->
+
+    </div><!-- End columns -->
+  </div><!-- End row -->
+</div><!-- End container -->

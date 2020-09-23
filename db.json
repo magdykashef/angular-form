@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "firstname": "ahmed",
+      "address": "cairo",
+      "email": "ahmed@gmail.com",
+      "telnum": "01063560004",
+      "id": 1
+    },
+    {
+      "firstname": "ssssssss",
+      "address": "sssssssssss",
+      "email": "dsdfdsf@ksdjfsd.com",
+      "telnum": "01063560004",
+      "id": 2
+    },
+    {
+      "firstname": "magdy kashef",
+      "address": "cairo",
+      "email": "magdy@gmail.com",
+      "telnum": "01063560004",
+      "id": 3
+    },
+    {
+      "firstname": "magdy",
+      "address": "cairo",
+      "email": "magdy_kashef@outlook.com",
+      "telnum": "01063560004",
+      "id": 4
+    },
+    {
+      "firstname": "magdy",
+      "address": "magdy",
+      "email": "magdy@magdy.com",
+      "telnum": "01063560004",
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<!-- start card -->
+<div class="card">
+  <!-- start row -->
+  <div class="form-group row mt-4 justify-content-center">
+
+    <!-- start image -->
+    <div class="col-4 d-sm-inline-flex d-block">
+      <img class="w-75" src="../../assets/person.jpeg" alt="user photo">
+    </div><!-- End image -->
+
+    <!-- start columns -->
+    <div class="form col-sm-6 col-10">
+
+      <!-- start spinner -->
+      <div class="offset-5 col-3 " *ngIf="showSpinner">
+        <mat-spinner></mat-spinner>
+        <p>Saving Data</p>
+      </div><!-- start spinner -->
+
+      <!-- start form -->
+      <form novalidate [formGroup]="registerForm" (ngSubmit)="onSubmit()" [hidden]="showSpinner">
+
+        <!-- start firstname -->
+        <mat-form-field class="d-block">
+          <input matInput formControlName="firstname" placeholder="First Name" type="text">
+          <mat-error *ngIf="formErrors.firstname">{{formErrors.firstname}}</mat-error>
+        </mat-form-field><!-- End firstname -->
+
+        <!-- start address -->
+        <mat-form-field class="d-block">
+          <input formControlName="address" matInput placeholder="Address" type="text">
+          <mat-error *ngIf="formErrors.address">{{formErrors.address}}</mat-error>
+        </mat-form-field><!-- End address -->
+
+        <!-- start email -->
+        <mat-form-field class="d-block">
+          <input matInput formControlName="email" placeholder="Email" type="email">
+          <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+        </mat-form-field><!-- End email -->
+
+        <!-- start telnum -->
+        <mat-form-field class="d-block">
+          <input matInput formControlName="telnum" placeholder="Tel. Number" type="tel" [pattern]="telNumberPattern">
+          <mat-error *ngIf="formErrors.telnum">{{formErrors.telnum}}</mat-error>
+        </mat-form-field><!-- End telnum -->
+
+        <!-- start submit button -->
+        <button type="submit" [disabled]="!registerForm.valid" class="mt-3 btn btn-success btn-block">Save</button>
+        <!-- End submit button -->
+
+        <!-- start back button -->
+        <button (click)="onBack()" class="mt-3 btn btn-secondary btn-block">Cancel</button>
+        <!-- End back button -->
+
+      </form><!-- End form -->
+    </div><!-- End columns -->
+  </div><!-- End row -->
+
+</div><!-- End card -->
